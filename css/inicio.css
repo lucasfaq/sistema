@@ -1,0 +1,20 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+}
+.site-header{
+    background-color: gainsboro;
+}
+.py-2{
+    margin:1.7em;
+    float:right;
+    display: inline-block;
+}
+.site-header a{
+    color:#214577;
+    text-decoration: none;
+    text-align: center;
+    background-color: transparent;
+}

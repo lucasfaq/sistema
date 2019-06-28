@@ -1,0 +1,60 @@
+body{
+    background-color: gainsboro;
+}
+#consmarca{
+    width: 200px
+}
+.panel-danger{
+    width: 400px;
+    background-color: lightskyblue;
+    border-radius: 10px;
+}
+.panel-header{
+    padding: 30px;
+    text-align: center;
+}
+.panel-body label{
+    margin: 10px 0px;
+}
+.panel-body{
+    width: 400px;
+    padding: 30px 30px;
+    background-color: white;
+    border-radius: 10px;    
+}
+#nome{
+    padding-left: 10px;
+}
+.fa-user{
+    position: absolute;
+    color: gainsboro;
+    top: 226px;
+    left: 55px;
+}
+#usuario{
+    padding-left: 30px;
+}
+#email{
+    padding-left: 30px;
+}
+.fa-envelope{
+    position: absolute;
+    color: gainsboro;
+    top: 309px;
+    left: 54px;
+}
+#senha{
+    padding-left: 30px;
+}
+.fa-keycdn{
+    position: absolute;
+    color: gainsboro;
+    top: 390px;
+    left: 54px;
+}
+input[type="text"]:focus{
+    border-color: dodgerblue;
+}
+input[type="text"]:focus + i{
+    color: dodgerblue;
+}
