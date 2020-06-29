@@ -1,0 +1,66 @@
+topo
+    +clearfix
+    box-sizing: border-box
+
+    .logo
+        margin: 10px 10px
+        float: left
+        
+        .logo-consultar 
+            width: 180px
+            height: 66px
+        
+    .info
+        margin: 10px 10px
+        float: right
+        .linha
+            margin: -10px 0px 0px 0px
+            border-bottom: 1px solid $azul-escuro
+        ul
+            +flexbox
+            +align-items(center)
+            +justify-content(space-around)
+            li
+                display: inline-block
+                font-size: 11px
+                color: $azul-escuro
+            i:before
+                margin: -10px 5px 0px 5px
+                +awesome
+                float: left
+                color: $azul-escuro
+    nav
+        margin-top: 100px
+        background-color: $azul-escuro
+        height: 80px
+        ul
+            +flexbox
+            +align-items(center)
+            +justify-content(space-around)
+            li
+                margin: 45px 0px 0px 0px
+                a
+                    color: $branco
+                    text-transform: uppercase
+                    position: relative
+                    z-index: 1
+                    .ini
+                        margin: -50px 0px 0px 7px
+                        position: absolute
+                        +awesome
+                        font-size: 24px
+                    .con
+                        margin: -50px 0px 0px 84px
+                        position: absolute
+                        +awesome
+                        font-size: 24px
+                    .exa
+                        margin: -50px 0px 0px 13px
+                        position: absolute
+                        +awesome
+                        font-size: 24px
+                    .pac
+                        margin: -50px 0px 0px 13px
+                        position: absolute
+                        +awesome
+                        font-size: 24px

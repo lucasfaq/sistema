@@ -3,18 +3,20 @@
 /*jslint browser: true*/
 /*global $, jQuery*/
 
-var gulp = require('gupl');
+var gulp = require('gulp');
 var sass = require('gulp-sass');
 var watch = require('gulp-watch');
 
 gulp.task('sass', function(){
    return gulp.src('sass/**/*.sass')
        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-       .pipe(gupl.dest('css')) 
+       .pipe(gulp.dest('css')) 
 });
 
 gulp.task('watch', function(){
-   gulp.watch('sass/**/*.sass', ['sass'])
+    console.log(" ")
+    gulp.watch('sass/**/*.sass', gulp.series('sass'))
+    console.log(" ")
 });
 
-gulp.task('default', ['sass', 'watch']);
+gulp.task('default', gulp.series('sass', 'watch'));

@@ -1,0 +1,87 @@
+/* ======== Cores */
+$preto: #000
+$branco: white
+$azul: #4369AC
+$azul-escuro: #003660
+$azul-claro: #6BC5D3
+$laranja: #E64411
+$amarelo: #FCBE04
+$cinza-claro: #e1e1e1
+
+/* ========= Fontes */
+$light: 300
+$regular: 400
+$bold: 700
+
+$celular: max-width 480px
+$tablet: max-width 740px
+$web: max-width 1280px
+
+=flexbox
+  display: -webkit-box
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flexbox
+  display: flex
+
+=gradient($angle,$gradient1, $gradient2)
+  background-color: $gradient2 
+  background-image: -webkit-gradient(linear, $angle, from($gradient1), to($gradient2))
+  background-image: -webkit-linear-gradient($angle, $gradient1, $gradient2)
+  background-image:    -moz-linear-gradient($angle, $gradient1, $gradient2)
+  background-image:     -ms-linear-gradient($angle, $gradient1, $gradient2)
+  background-image:      -o-linear-gradient($angle, $gradient1, $gradient2)
+  background-image:         linear-gradient($angle, $gradient1, $gradient2)
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=$angle,StartColorStr='#{$gradient1}', EndColorStr='#{$gradient2}')
+
+/* ======== Outros */
+=transition($transition...) 
+  -moz-transition:    all $transition linear
+  -o-transition:      all $transition linear
+  -webkit-transition: all $transition linear
+  transition:         all $transition linear
+
+=border-radius($radius) 
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  -ms-border-radius: $radius
+  border-radius: $radius
+
+@function calculateRem($size) 
+  $remSize: $size / 16px
+  @return $remSize * 1rem
+
+=font-size($size) 
+  font-size: $size
+  font-size: calculateRem($size)
+
+=awesome
+    font-family: "Font Awesome 5 Free"
+    font-weight: 900
+
+=opacity($opacity) 
+  opacity: $opacity
+  $opacity-ie: $opacity * 100
+  filter: alpha(opacity=$opacity-ie)
+
+/* ======== Background Color Opacity */
+=background-opacity($color: #000, $opacity: 0.85) 
+  background: $color
+  background: rgba($color, $opacity)
+
+/* ======== Columns */
+=columns($count: 3, $gap: 10) 
+  @include css3-prefix('column-count', $count)
+  @include css3-prefix('column-gap', $gap)
+
+=box_shadow($level)
+    @if $level == 1
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+    @else if $level == 2
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+    @else if $level == 3
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
+    @else if $level == 4
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+    @else if $level == 5
+        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)

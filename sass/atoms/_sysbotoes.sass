@@ -1,0 +1,67 @@
+.btnl
+    position: relative
+    border: none
+    font-family: inherit
+    font-size: inherit
+    color: $branco
+    background: none
+    cursor: pointer
+    display: inline-block
+    margin: 10px 10px
+    padding: 10px 30px
+    text-transform: uppercase
+    letter-spacing: 1px
+    font-weight: 700
+    outline: none
+    +transition(0.3s)
+    +border-radius(5px)
+    .btnl-1
+        border: 3px solid $branco
+        color: $branco
+    &:hover
+        color: $azul-escuro
+        background: $branco
+.btnl:after
+    position: absolute
+    content: ''
+    z-index: -1
+    +transition(0.3s)
+.datas
+    border: 1px solid $cinza_claro
+    border-radius: 5px
+    background-color: $branco
+    padding: 3px 5px
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1)
+    width: 190px
+    background: $branco url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat
+.datas::-webkit-inner-spin-button
+    display: none
+.datas::-webkit-calendar-picker-indicator
+    opacity: 0
+input
+    border: 1px solid $cinza_claro
+    border-radius: 5px
+    background-color: $branco
+    padding: 3px 5px
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1)
+select
+    -webkit-appearance: button
+    +border-radius(5px)
+    -webkit-padding-end: 20px
+    -webkit-padding-start: 2px
+    -webkit-user-select: none
+    background-image: url("../img/selectpic.png")
+    background-image: +gradient(40%, #FAFAFA, #E5E5E5)
+    background-position: 97% center
+    background-repeat: no-repeat
+    border: 1px solid $cinza_claro
+    border-radius: 5px
+    background-color: $branco
+    padding: 3px 5px
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1)
+    font-size: inherit
+    margin: 5px
+    overflow: hidden
+    padding: 5px 10px
+    text-overflow: ellipsis
+    white-space: nowrap
